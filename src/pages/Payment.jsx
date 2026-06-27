@@ -10,7 +10,7 @@ const Payment = () => {
 
   const hash = CryptoJS.HmacSHA256(
     `total_amount=${totalPrice},transaction_uuid=${transaction_uuid},product_code=EPAYTEST`,
-    import.meta.env.ESEWA_SECRET_KEY,
+    import.meta.env.VITE_ESEWA_SECRET_KEY,
   );
 
   const signature = CryptoJS.enc.Base64.stringify(hash);
