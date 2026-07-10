@@ -4,14 +4,13 @@ import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from "react-router";
 
 const Login = () => {
-  const {login,isAuthenticated,user,isLoading}=  useAuth0();
+  const {login,isAuthenticated,user,isLoading, loginWithRedirect}=  useAuth0();
   console.log(user);
   const navigate=useNavigate();
 
   useEffect(()=>{
     if(user&&isAuthenticated){
         localStorage.setItem("user",JSON.stringify(user));
-
         navigate("/");
     }
   },[user,isAuthenticated,navigate]);
@@ -77,7 +76,7 @@ const Login = () => {
 
           <button
             type="submit"
-    
+            onClick={login}
             className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold transition duration-300 shadow-md hover:shadow-lg"
           >
             Login
