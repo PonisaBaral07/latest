@@ -15,6 +15,7 @@ import Failure from "./pages/Failure";
 import Login from "./pages/Login";
 import Protected from "./components/Protected";
 import Profile from "./pages/Profile";
+import Footer from "./components/Footer";
 
 const AppRoutes = () => {
   return (
@@ -30,6 +31,7 @@ const AppRoutes = () => {
         } 
          />
          <Route path="/login" element={<Login />} />
+         <Route path="/home" element={<Home />} />
          <Route path="/profile" element={<Profile />} />
          <Route path="/payment" element={<Payment />} />
          <Route path="/success" element={<Failure />} />

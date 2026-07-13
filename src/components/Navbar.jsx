@@ -14,6 +14,9 @@ const Navbar = () => {
         <h2 className="text-[#0C6967] bold text-[25px] ">momos</h2>
       </div>
       <div className="flex items-center gap-8 px-10">
+        <NavLink to="/" className="hover:text-orange-600 text-gray-500" to="/home" >
+          Home
+        </NavLink>
         <NavLink className="hover:text-orange-400 text-gray-500" to="/about">
           About Us
         </NavLink>
